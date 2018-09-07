@@ -16,6 +16,7 @@ describe 'GithubService' do
 
   describe '#authenticate!' do
     before :each do
+      binding.pry
       @service = GithubService.new
       @service.authenticate!(ENV["GITHUB_CLIENT"], ENV["GITHUB_SECRET"], "20")
     end
